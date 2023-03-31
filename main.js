@@ -226,7 +226,7 @@ function btnClose(mess) {
 
 // reset Btn
 
-function resetBtn() {
+function resetBtn1() {
   modelInput.forEach(input =>
 
     input.value = null
