@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./asset/css/admin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+</head>
+
+<body>
+  <div class="header">
+    <div class="header-nav">
+      <div class="header-nav-list" onclick="getbackHome()">Home</div>
+      <div class="header-nav-list">Admin</div>
+
+
+
+    </div>
+    <div class="header-nav">
+
+
+      <div class="header-nav-list margin-left">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Log-Out
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <!-- body -->
+  <div class="body">
+    <div class="body-left">
+
+      <div class="body-left-item">
+        <H2>Danh mục</H2>
+
+        <ul class="body-left-item-list">
+          <li class="body-left-item-list-dis">Manufacturers</li>
+          <li class="body-left-item-list-dis">Category</li>
+          <li class="body-left-item-list-dis">Product</li>
+          <li class="body-left-item-list-dis">Account</li>
+        </ul>
+
+      </div>
+
+      <div class="body-left-item">
+        <H2>Manufacturers</H2>
+
+        <ul class="body-left-item-list">
+          <li>Samsung</li>
+          <li>Apple</li>
+          <li>Xiaomi</li>
+          <li>Oppp</li>
+        </ul>
+
+      </div>
+
+      <div class="body-left-item">
+        <H2>Categories</H2>
+
+        <ul class="body-left-item-list">
+          <li> <select name="" id="">
+
+              <option value="Select">Select</option>
+            </select>
+          </li>
+          <li>Filter</li>
+
+        </ul>
+
+      </div>
+
+
+
+
+
+    </div>
+
+
+    <div class="body-right">
+      <!-- manufacturer -->
+      <div class="body-right-cate active">
+        Manufacturer là các nhà sản xuất như SamSung, Apple, Oppo, XiaoMi
+      </div>
+
+      <!-- Category -->
+      <div class="body-right-cate">
+        Category các danh mục đang được cập nhập
+      </div>
+
+      <!-- Product -->
+      <div class="body-right-cate">
+
+        <div class="body-right-search">
+          <input type="text" placeholder="Tìm kiếm sản phẩm">
+          <button class="body-right-search-btn">Seach</button>
+        </div>
+
+        <div class="body-right-search-list">
+          <button class="body-right-list-btn " onclick="addNew()">Add New</button>
+
+
+
+
+
+          <!-- product info -->
+          <div class="product-info">
+            <!--phần header -->
+            <div class="product-info-list">ID</div>
+            <div class="product-info-list">Name</div>
+            <div class="product-info-list">Price</div>
+            <div class="product-info-list">Info</div>
+            <div class="product-info-list">Details</div>
+            <div class="product-info-list">Stars</div>
+            <div class="product-info-list">Image</div>
+            <div class="product-info-list">NSX</div>
+            <div class="product-info-list">Category</div>
+            <div class="product-info-list">Edit</div>
+            <div class="product-info-list">Delete</div>
+
+            <!-- phần info -->
+            <div class="product-info-list-dis">1</div>
+            <div class="product-info-list-dis">Samsung galaxy S22</div>
+            <div class="product-info-list-dis">30.099.000</div>
+            <div class="product-info-list-dis">6.9 inch, Chip MediaTek Helio G85(12mm) mạnh mẽ</div>
+            <div class="product-info-list-dis">Product Details</div>
+            <div class="product-info-list-dis">5</div>
+            <div class="product-info-list-dis">Image</div>
+            <div class="product-info-list-dis">Samsung</div>
+            <div class="product-info-list-dis">Điện Thoại</div>
+            <div class="product-info-list-btn edit-pro " onclick="editPro()" > <button class="btn">Edit</button> </div>
+            <div class="product-info-list-btn del-pro " onclick="delPro()" ><button class="btn red del" >Delete</button></div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Account -->
+      <div class="body-right-cate">
+        Account Vũ đẹp trai
+      </div>
+
+
+
+    </div>
+
+
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal">
+
+    <div class="modal-new-product">
+      <h1>Create new product</h1>
+      <div class="modal-new-product-list">
+        <label for="id">ID</label> <br>
+        <input class="modal-input" type="text" id="id" placeholder="Enter id number">
+
+      </div>
+      <div class="modal-new-product-list">
+        <label for="name">Name</label> <br>
+        <input class="modal-input" type="text" id="name" placeholder="Enter name">
+
+      </div>
+      <div class="modal-new-product-list">
+        <label for="price">Price</label> <br>
+        <input class="modal-input" type="text" id="price" placeholder="Enter price">
+
+      </div>
+
+      <div class="modal-new-product-list">
+        <label for="info">Info</label> <br>
+        <textarea class="modal-input" name="" id="info" cols="30" rows="10"></textarea>
+
+      </div>
+
+      <div class="modal-new-product-list">
+        <label for="detail">Details</label> <br>
+        <textarea class="modal-input" name="" id="detail" cols="30" rows="10"></textarea>
+
+
+      </div>
+
+      <div class="modal-new-product-list">
+        <label for="star">Star</label> <br>
+        
+        <select class="modal-input" name="" id="star">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+
+
+        </select>
+      </div>
+
+      <div class="modal-new-product-list">
+        <label for="Img">Img</label> <br>
+        <input class="modal-input" type="file" id="Img" placeholder="Enter star">
+
+      </div>
+
+
+      <div class="modal-new-product-list">
+        <label for="Manufacturer">Manufacturer</label> <br>
+        <select class="modal-input" name="" id="Manufacturer"> Choose a Manufacturer
+          <option value="Apple">Apple</option>
+          <option value="XiaoMi">XiaoMi</option>
+          <option value="Oppo">Oppo</option>
+
+
+
+        </select>
+      </div>
+
+      <div class="modal-new-product-list">
+        <label for="Categories">Categories</label> <br>
+        <select class="modal-input" name="" id="Categories">
+          <option value="Điện Thoại">Điện Thoại</option>
+          <option value="Laptop">Laptop</option>
+          <option value="Màng hình">Màng hình</option>
+
+
+
+        </select>
+      </div>
+
+
+      <button class="btn blue" onclick="btnSave()">Save</button>
+      <button class="btn update" onclick="update()">Update</button>
+      <button class="btn reset" onclick="resetBtn()">Reset</button>
+      <br><br>
+      <button class="btn red flright" onclick="btnClose()">Close</button>
+      
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+  <script src="./main.js"></script>
+
+</body>
+
+</html>
